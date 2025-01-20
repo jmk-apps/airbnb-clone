@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={font.className}
       >
-        <Modal title="Hello World" isOpen />
+        <RegisterModal />
         <Navbar />
         {children}
       </body>
