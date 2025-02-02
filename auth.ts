@@ -19,6 +19,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             password: { label: "password", type: "password" },
         },
         async authorize(credentials) {
+
             if (!credentials?.email || !credentials?.password) {
                 throw new Error("Invalid credentials")
             }
@@ -49,6 +50,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
     signIn: '/',
   },
+  session: {
+    strategy: "jwt",
+  },
+  secret: process.env.NEXTAUTH_SECRET,
   debug: process.env.NODE_ENV === "development",
 })
 
