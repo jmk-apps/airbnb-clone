@@ -22,6 +22,7 @@ import Button from '../Button';
 import { useRouter } from "next/navigation";
 
 
+
 const LoginModal = () => {
   const router = useRouter();  
   const registerModal = useRegisterModal();
@@ -103,7 +104,7 @@ const LoginModal = () => {
             outline
             label='Continue with Github'
             icon={AiFillGithub}
-            onClick={() => {}}
+            onClick={() => signIn('github')}
         />
         <div 
             className='
