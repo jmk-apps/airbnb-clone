@@ -6,6 +6,7 @@ import Container from '../Container'
 import Logo from './Logo'
 import Search from './search'
 import UserMenu from './UserMenu'
+import Categories from './Categories';
 
 interface NavbarProps {
     currentUser?: User | null
@@ -39,8 +40,8 @@ const Navbar: React.FC<NavbarProps> = ({
                     <UserMenu currentUser={currentUser} />                   
                 </div>
             </Container>
-
         </div>
+        <Categories />
     </div>
   )
 }
