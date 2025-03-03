@@ -12,7 +12,7 @@ export default async function getReservations(
 ) {
 
     try {
-        const { listingId, userId, authorId } = params
+        const { listingId, userId, authorId } = await params
 
         const query: any = {}
 
@@ -39,7 +39,7 @@ export default async function getReservations(
         })
 
         return reservations
-        
+
     } catch (error: any) {
         throw new Error(error) 
     }  
