@@ -4,7 +4,7 @@ import { User } from '@prisma/client';
 import React from 'react'
 import Container from '../Container'
 import Logo from './Logo'
-import Search from './search'
+import Search from './Search'
 import UserMenu from './UserMenu'
 import Categories from './Categories';
 

@@ -4,7 +4,7 @@ import { prisma } from "./app/libs/prisma"
 import GitHub from "next-auth/providers/github"
 import Google from "next-auth/providers/google"
 import Credentials from "next-auth/providers/credentials"
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 
  
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -55,5 +55,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   secret: process.env.NEXTAUTH_SECRET,
   debug: process.env.NODE_ENV === "development",
+  callbacks: {
+    authorized: async ({ auth }) => {
+        return !!auth
+    },
+  }
 })
 
