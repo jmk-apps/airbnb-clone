@@ -7,6 +7,7 @@ import LoginModal from "./components/modals/LoginModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modals/RentModal";
+import SearchModal from "./components/modals/SearchModal";
 
 
 const geistSans = Geist({
@@ -43,6 +44,7 @@ export default async function RootLayout({
       >
         <ToasterProvider />
         <LoginModal />
+        <SearchModal />
         <RentModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
