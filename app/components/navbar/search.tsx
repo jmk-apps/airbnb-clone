@@ -7,7 +7,7 @@ import useCountries from "../hooks/useCountries";
 import { useMemo } from "react";
 import { differenceInDays } from "date-fns";
 
-const search = () => {
+const Search = () => {
   const searchModal = useSearchModal()
   const params = useSearchParams()
   const { getByValue } = useCountries()
@@ -126,4 +126,4 @@ const search = () => {
   )
 }
 
-export default search
+export default Search

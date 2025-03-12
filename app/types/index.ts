@@ -1,4 +1,4 @@
-import { Listing, Reservation, User } from "@prisma/client";
+import { Listing, Reservation } from "@prisma/client";
 
 export type ReservationWithListing = Reservation & {
   listing: Listing

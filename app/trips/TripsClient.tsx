@@ -1,6 +1,6 @@
 'use client'
 
-import { Listing, Reservation, User } from '@prisma/client'
+import { User } from '@prisma/client'
 import React, { useCallback, useState } from 'react'
 import Container from '../components/Container'
 import Heading from '../components/Heading'

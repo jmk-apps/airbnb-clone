@@ -6,7 +6,6 @@ import { FcGoogle } from 'react-icons/fc';
 import { useCallback, useState } from 'react';
 import {
     FieldValues,
-    set,
     SubmitHandler,
     useForm,
 } from 'react-hook-form';
@@ -18,7 +17,6 @@ import Input from '../inputs/Input';
 import toast from 'react-hot-toast';
 import Button from '../Button';
 import { signIn } from "next-auth/react"
-import LoginModal from './LoginModal';
 import useLoginModal from '../hooks/useLoginModal';
 
 const RegisterModal = () => {

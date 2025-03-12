@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import ListingCard from '../components/listings/ListingCard'
-import { ReservationWithListing } from '../types'
+
 
 interface PropertiesClientProps {
     listings: Listing[]
